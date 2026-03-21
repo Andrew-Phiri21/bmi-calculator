@@ -144,4 +144,4 @@ with foot_col2:
             </p>
         </div>
         """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True)
