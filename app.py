@@ -91,7 +91,7 @@ elif choice == "Login":
         data = c.fetchone()
         
         if data and check_hashes(passwd, data[0]):
-            st.success(f"Welcome, Commander {user}")
+            st.success(f"Welcome, {user}")
             
             # --- MAIN APP LOGIC ---
             col1, col2 = st.columns(2)
@@ -130,5 +130,18 @@ elif choice == "Login":
             if user and passwd: # Only show error if they actually tried to log in
                 st.sidebar.error("Invalid Username or Password.")
 
+# --- 5. THE FOOTER (Branding & Credits) ---
 st.markdown("---")
-st.caption("Poered by DataAmnis ⚡")
+foot_col1, foot_col2, foot_col3 = st.columns([1, 2, 1])
+
+with foot_col2:
+    st.markdown(
+        """
+        <div style="text-align: center;">
+            <p style="font-family: 'Courier New', Courier, monospace; color: #888; font-size: 0.9em;">
+                Powered by <a href="https://dataamnis.netlify.app/?#" target="_blank" 
+                style="color: #00d4ff; text-decoration: none; font-weight: bold;">DataAmnis</a>
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True
