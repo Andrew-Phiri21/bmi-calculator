@@ -167,7 +167,7 @@ elif choice == "Login":
             with col2:
                 height = st.number_input("Height (m)", min_value=0.5, value=1.75)
             
-           if st.button("Calculate & Save to History"):
+        if st.button("Calculate & Save to History"):
                 bmi = weight / (height**2)
                 # Call our new enriched AI engine
                 report = get_ai_advice(bmi)
