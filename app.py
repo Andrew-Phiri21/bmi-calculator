@@ -170,7 +170,7 @@ elif choice == "Login":
                 st.subheader(f"BMI Score: {bmi:.2f}")
                 st.markdown(f"### Current Standing: :{report['color']}[{report['status']}]")
                 
-                tab1, tab2 = st.tabs(["📋 AI Protocol", "🍎 Sample Meal Plan"])
+                tab1, tab2 = st.tabs(["📋 Action Plan", "🍎 Sample Meal Plan"])
                 with tab1:
                     st.write(report['advice'])
                 with tab2:
